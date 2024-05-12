@@ -16,11 +16,18 @@ body{
 }
 
 .todo-container{
-  width:  450px;
+  width:  566px;
   height: auto;
-  /* border: 1px solid white;| */
   padding: 0px 20px 0px 20px;
 }
+
+.project-container {
+  width: 450px;
+  height: auto;
+  padding: 0px 20px 0px 20px;
+  margin-bottom: 20px; /* Add margin between ProjectList and ProjectAdd */
+}
+
 
 .todo-search{
   width: 100%;
@@ -32,6 +39,23 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.project-add{
+  width: 100%;
+  height: 120px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-add small{
+  align-self: self-start;
+  color: red
 }
 
 .todo-search small{
@@ -47,17 +71,66 @@ body{
   justify-content: space-between;
 }
 
+.project-add form{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 .todo-list{
   width: 100%;
   height: auto;
-  /* margin-top: 20px; */
   background-color: white;
   padding-top: 10px !important;
   border-radius: 10px;
   padding: 10px 10px 20px 10px;
 }
 
+.project-list{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding-top: 10px !important;
+  border-radius: 10px;
+  padding: 10px 10px 20px 10px;
+  /* margin-bottom: 20px; */
+}
+
+.project-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-list li {
+  padding: 10px;
+  border-bottom: 1px solid silver;
+  cursor: pointer;
+}
+
+.project-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.project-list h2 {
+  margin-bottom: 10px;
+}
+
+.project-list li:last-child {
+  border-bottom: none;
+}
+
 .todo-search form input, select{
+  border: 1px solid silver;
+  height: 50px;
+  padding: 10px;
+  width: 419px;
+  border-radius: 10px;
+}
+
+.project-add form input, select{
   border: 1px solid silver;
   height: 50px;
   padding: 10px;
@@ -76,6 +149,17 @@ input:focus, select:focus{
 }
 
 .todo-search form button{
+  height: 50px;
+  width: 70px;
+  padding: 0px 10px 0px 10px;
+  background-color: rgb(123, 53, 197);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-add form button{
   height: 50px;
   width: 70px;
   padding: 0px 10px 0px 10px;
@@ -120,10 +204,20 @@ input:focus, select:focus{
   display: flex;
 }
 
+.project-list .task{
+  display: flex;
+}
+
 .todo-list .task input{
   margin-right: 10px;
   width: 20px;
 }
+
+.project-list .task input{
+  margin-right: 10px;
+  width: 20px;
+}
+
 
 
 /* modal style */
@@ -224,4 +318,95 @@ input:focus, select:focus{
 
 .strike{
   text-decoration: line-through;
+}
+
+.project-box-link {
+  text-decoration: none;
+  color: black;
+}
+
+.project-box {
+  cursor: pointer; 
+}
+
+
+.login-container {
+  width: 350px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.signup-container {
+  width: 350px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]
+ {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #a459f4;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #7b3ce8;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.redirect-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.redirect-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.redirect-link a:hover {
+  text-decoration: underline;
 }
