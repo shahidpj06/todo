@@ -14,7 +14,7 @@
 
   <p>git clone: https://github.com/shahidpj06/todo</p>
 
-  <p>Technologies</p>
+  <h3>Technologies</h3>
   <ul>
         <li>Languages used: Python, Javascript, HTML, CSS</li>
         <li>Frameworks: Django</li>
