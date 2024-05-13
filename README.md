@@ -12,3 +12,5 @@
 
 <p>The app is built using Django for the backend and React for the frontend, providing a seamless and interactive user experience.</p>
 
+<p>git clone: https://github.com/shahidpj06/todo</p>
+
