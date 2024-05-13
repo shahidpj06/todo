@@ -1,6 +1,6 @@
 <h1>Todo Django - React App</h1>
 
-<h1>Project Overview</h1>
+<h3>Project Overview</h3>
 
 <p>This Todo App provides users with the ability to manage their tasks effectively. Users can:</p>
     <ul>
