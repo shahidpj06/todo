@@ -16,9 +16,9 @@
 
   <h3>Technologies</h3>
   <ul>
-        <li>Languages used: Python, Javascript, HTML, CSS</li>
-        <li>Frameworks: Django</li>
-        <li>Library: React(React + Vite)</li>
-        <li>Database: PostgreSQL</li>
-        <li>Tools used: VSCode, SQL Shell (psql)</li>
+        <li>Languages used:-<strong> Python, Javascript, HTML, CSS</strong></li>
+        <li>Frameworks:-<strong> Django</strong></li>
+        <li>Library:-<strong> React(React + Vite)</strong></li>
+        <li>Database:-<strong> PostgreSQL</strong></li>
+        <li>Tools used:-<strong> VSCode, SQL Shell (psql)</strong></li>
   </ul>
