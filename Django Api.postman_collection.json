@@ -1,0 +1,310 @@
+{
+	"info": {
+		"_postman_id": "618009a0-929a-426d-9f74-0f665fc431ce",
+		"name": "Django Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34863429"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"shahid\",\r\n    \"password\": \"shahid\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMzM2Mzc2MywiaWF0IjoxNzE1NTg3NzYzLCJqdGkiOiJjMzk3MjkwMzRhYjc0OWRiOWFiMTUzYjZlZTg1ODZkMyIsInVzZXJfaWQiOjMsInVzZXJuYW1lIjoic2hhaGlkIn0.7PNk0pcLrU31qnqoqwmP_Zp8voKhmcFWqQg7fV0He7Q\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Home Page",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1NTg4OTY1LCJpYXQiOjE3MTU1ODg2NjUsImp0aSI6Ijg4MDk1NzkyMDhmMTRmNWVhYjg4MGU3NTFmYTA0ODdkIiwidXNlcl9pZCI6MywidXNlcm5hbWUiOiJzaGFoaWQifQ.hrI1r-Lfz2tQ8rK2GOtMFU4bT8rpRyBlpLixAZjvWbk"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1NTg4OTY1LCJpYXQiOjE3MTU1ODg2NjUsImp0aSI6Ijg4MDk1NzkyMDhmMTRmNWVhYjg4MGU3NTFmYTA0ODdkIiwidXNlcl9pZCI6MywidXNlcm5hbWUiOiJzaGFoaWQifQ.hrI1r-Lfz2tQ8rK2GOtMFU4bT8rpRyBlpLixAZjvWbk"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project/Todo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1NTg5ODA2LCJpYXQiOjE3MTU1ODk1MDYsImp0aSI6Ijg1YjA3ZWVlYjVkMzRjNDc5ZjQwNDgzODgyYTkyZTFlIiwidXNlcl9pZCI6MywidXNlcm5hbWUiOiJzaGFoaWQifQ.shAWVal2kIhXu2OWhb6MdVQ7Kjm-2T_AQYYCKfhcurQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"title\": \"Project edited\",\r\n    \"created_date\": \"2024-05-13T07:39:20.368445Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/2/todos/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"2",
+						"todos",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todo Updated",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1NTg5ODA2LCJpYXQiOjE3MTU1ODk1MDYsImp0aSI6Ijg1YjA3ZWVlYjVkMzRjNDc5ZjQwNDgzODgyYTkyZTFlIiwidXNlcl9pZCI6MywidXNlcm5hbWUiOiJzaGFoaWQifQ.shAWVal2kIhXu2OWhb6MdVQ7Kjm-2T_AQYYCKfhcurQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"task\": \"task edited\",\r\n    \"status\": true,\r\n    \"project\": 2,\r\n    \"created_date\": \"2024-05-13T07:39:42.415452Z\",\r\n    \"updated_date\": \"2024-05-13T07:40:08.570803Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/2/todos/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"2",
+						"todos",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1NTkwMTIzLCJpYXQiOjE3MTU1ODk4MjMsImp0aSI6IjBjNjFhYzM1YWVlNDQzYWQ4NDVhNTEyZGI4MTdjOTRjIiwidXNlcl9pZCI6MywidXNlcm5hbWUiOiJzaGFoaWQifQ.iQFhamKQw_xe7z3disnT1O5xsEPMfPkkWK-tElzlgjc"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/2/todos/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"2",
+						"todos",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project title updated",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1NTkwMTIzLCJpYXQiOjE3MTU1ODk4MjMsImp0aSI6IjBjNjFhYzM1YWVlNDQzYWQ4NDVhNTEyZGI4MTdjOTRjIiwidXNlcl9pZCI6MywidXNlcm5hbWUiOiJzaGFoaWQifQ.iQFhamKQw_xe7z3disnT1O5xsEPMfPkkWK-tElzlgjc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"title\": \"Project title updated\",\r\n    \"created_date\": \"2024-05-13T07:39:24.225671Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
