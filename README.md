@@ -12,7 +12,6 @@
 
   <p>The app is built using Django for the backend and React for the frontend, providing a seamless and interactive user experience.</p>
 
-  <p>git clone: https://github.com/shahidpj06/todo</p>
 
   <h3>Technologies</h3>
   <ul>
@@ -22,3 +21,15 @@
         <li>Database:-<strong> PostgreSQL</strong></li>
         <li>Tools used:-<strong> VSCode, SQL Shell (psql)</strong></li>
   </ul>
+
+  <h1>Installation Guide</h1>
+      <p>git clone: https://github.com/shahidpj06/todo</p>p
+    <ul>
+      <h4>Setup Backend</h4>
+      <li>cd todo_project</li>
+      <li>Install required packages:pip install -r requirements.txt</li>
+      <li>Set up the database: python manage.py migrate</li>
+      <li>Create a superuser: python manage.py createsuperuser</li>
+      <li>Start the development server: python manage.py runserver</li>
+    </ul>
+  
