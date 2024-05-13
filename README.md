@@ -12,7 +12,7 @@
 
   <p>The app is built using Django for the backend and React for the frontend, providing a seamless and interactive user experience.</p>
 
-  <p>For easy testing of the <mark>API endpoints</mark>, a JSON file is provided that can be imported into Postman. This file includes pre-configured requests for each API endpoint along with example data.</p>
+  <p>For easy testing of the <strong>API endpoints</strong>, a JSON file (Django Api.postman_collection.json) is provided that can be imported into Postman. This file includes pre-configured requests for each API endpoint along with example data.</p>
 
 
   <h3>Technologies</h3>
