@@ -23,13 +23,20 @@
   </ul>
 
   <h1>Installation Guide</h1>
-      <p>git clone: https://github.com/shahidpj06/todo</p>p
+      <p>git clone: https://github.com/shahidpj06/todo</p>
     <ul>
       <h4>Setup Backend</h4>
       <li>cd todo_project</li>
-      <li>Install required packages:pip install -r requirements.txt</li>
-      <li>Set up the database: python manage.py migrate</li>
-      <li>Create a superuser: python manage.py createsuperuser</li>
-      <li>Start the development server: python manage.py runserver</li>
+      <li>pip install -r requirements.txt</li>
+      <li>python manage.py migrate</li>
+      <li>python manage.py createsuperuser</li>
+      <li>python manage.py runserver</li>
     </ul>
+
+  <ul>
+    <h4>Setup Frontend</h4>
+    <li>cd frontend</li>
+    <li>npm install</li>
+    <li>npm run dev</li>
+  </ul>
   
