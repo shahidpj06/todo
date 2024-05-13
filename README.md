@@ -46,8 +46,13 @@
   <h1>Screenshots</h1>
     <p>Login</p>
     https://github.com/shahidpj06/todo/assets/127497564/253f6acc-ca18-4931-b18e-669421eef303
-    ![Screenshot (115)](https://github.com/shahidpj06/todo/assets/127497564/3f0b92fc-7aa1-4211-bb92-9b50908e6ec2)
     https://github.com/shahidpj06/todo/assets/127497564/3f0b92fc-7aa1-4211-bb92-9b50908e6ec2
+    https://github.com/shahidpj06/todo/assets/127497564/8b40216c-cdf8-4e5d-85c9-7f3d450591d5
+    ![Screenshot (118)](https://github.com/shahidpj06/todo/assets/127497564/ed54a555-80d2-4f14-9961-b0755354955b)
+    ![Screenshot (119)](https://github.com/shahidpj06/todo/assets/127497564/aa75ccf3-70e2-49d3-9a07-01bd09281352)
+
+
+    
 
   
   
