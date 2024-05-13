@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { MdDeleteOutline } from 'react-icons/md';
 import moment from 'moment';
-import { useForm } from 'react-hook-form'
 
   const TodoList = ({ todos, delete_todo, updated_todo, complete_todo }) => {
 
@@ -73,7 +72,7 @@ import { useForm } from 'react-hook-form'
                 value={task}
                 onChange={(e) => setTask(e.target.value)}
               />
-              {errors.task && <small>{errors.task.message}</small>}
+              {/* {errors.task && <small>{errors.task.message}</small>} */}
               <button id='add'>Add</button>
             </form>
             <div className="btn-container">

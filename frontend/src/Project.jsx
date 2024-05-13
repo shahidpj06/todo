@@ -2,25 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProjectAdd from './components/Project/ProjectAdd'; 
 import ProjectList from './components/Project/ProjectList';
-import Logout from './components/Auth/LogoutModal';
 import Navbar from './components/Navbar';
+import api from './services/api'
 
-const api = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api/',
-});
-
-api.interceptors.request.use(
-    (config) => {
-        const accessToken = localStorage.getItem('accessToken');
-        if (accessToken) {
-            config.headers.Authorization = `Bearer ${accessToken}`;
-        }
-        return config;
-    },
-    (error) => {
-        return Promise.reject(error);
-    }
-);
 
 const Project = () => {
     const [projects, setProjects] = useState([]);
@@ -57,11 +41,12 @@ const Project = () => {
         
         <div>
             <Navbar />
-            <div className="project-container">
-                {errors && <p>{errors}</p>}
-                <ProjectAdd addProject={addProject} newProject={newProject} setNewProject={setNewProject} />
-                <ProjectList projects={projects} selectProject={selectProject} />
-                <Logout />
+            <div className='main-contaner'>
+                <div className="project-container">
+                    {errors && <p>{errors}</p>}
+                    <ProjectAdd addProject={addProject} newProject={newProject} setNewProject={setNewProject} />
+                    <ProjectList projects={projects} selectProject={selectProject} />
+                </div>
             </div>
         </div>
     );

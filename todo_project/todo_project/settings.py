@@ -132,7 +132,7 @@ WSGI_APPLICATION = 'todo_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todoapp_db',
+        'NAME': 'tododjango_db',
         'HOST': 'localhost',
         'PORT': 5432,
         'USER': 'postgres',

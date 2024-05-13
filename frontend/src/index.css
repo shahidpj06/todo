@@ -10,22 +10,24 @@ body{
   background-color: #39155f;
   height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* */
 }
 
 .todo-container{
   width:  566px;
   height: auto;
   padding: 0px 20px 0px 20px;
+  
 }
 
 .project-container {
   width: 450px;
   height: auto;
   padding: 0px 20px 0px 20px;
-  margin-bottom: 20px; /* Add margin between ProjectList and ProjectAdd */
+  margin-bottom: 20px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 }
 
 
@@ -409,4 +411,61 @@ h2 {
 
 .redirect-link a:hover {
   text-decoration: underline;
+}
+
+
+.navbar {
+  background-color: #f8f9fa;
+  padding: 15px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 18px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-collapse {
+  display: flex;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  margin-top: -9px;
+}
+
+#logout_button {
+  height: 34px;
+  width: 70px;
+  padding: 0px 10px 0px 10px;
+  background-color: rgb(123, 53, 197);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.main-contaner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

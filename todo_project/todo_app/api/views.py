@@ -1,35 +1,32 @@
-from django.http import JsonResponse
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework import generics, status
-from rest_framework.response import Response
-from rest_framework.permissions import AllowAny, IsAuthenticated
-from django.shortcuts import get_object_or_404
-from django.contrib.auth import authenticate, logout
-from rest_framework_simplejwt.tokens import RefreshToken
-import requests
 import json
-from todo_app.models import Project, Todo
+import requests
 from .serializers import *
+from github import Github
+from todo_app.models import *
+from rest_framework import generics
+from rest_framework.response import Response
+from django.shortcuts import get_object_or_404
+from rest_framework.decorators import api_view
+from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 
-
+# class for obtaining JWT token with username - built in class from jwt
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
-
-        # Add custom claims
         token['username'] = user.username
-        # ...
-
         return token
-    
+
+
+# View for obtaining JWT token with username    
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = MyTokenObtainPairSerializer
 
+
+# API view for listing available routes/urls
 @api_view(['GET'])
 def getRoutes(request):
     routes = [
@@ -40,6 +37,14 @@ def getRoutes(request):
     return Response(routes)
 
 
+# API view for creating user
+class UserCreateView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [AllowAny]
+
+
+# API view for listing and creating projects
 class ProjectListView(generics.ListCreateAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
@@ -52,6 +57,7 @@ class ProjectListView(generics.ListCreateAPIView):
         serializer.save(user=self.request.user)
 
 
+# API view for retrieving, updating, and deleting project details
 class ProjectDetailsView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
@@ -60,6 +66,8 @@ class ProjectDetailsView(generics.RetrieveUpdateDestroyAPIView):
     def get_object(self):
         return get_object_or_404(self.queryset, id=self.kwargs.get('pk'), user=self.request.user)
 
+
+# API view for retrieving, updating, and deleting todo details
 class TodoDetailsView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
@@ -69,6 +77,8 @@ class TodoDetailsView(generics.RetrieveUpdateDestroyAPIView):
         project = get_object_or_404(Project, id=self.kwargs.get('project_id'), user=self.request.user)
         return get_object_or_404(project.todos, id=self.kwargs.get('todo_id'))
 
+
+# API view for listing and creating todos for a project
 class ProjectTodosView(generics.ListCreateAPIView):
     serializer_class = TodoSerializer
     permission_classes = [IsAuthenticated]
@@ -81,6 +91,8 @@ class ProjectTodosView(generics.ListCreateAPIView):
         project = get_object_or_404(Project, id=self.kwargs.get('project_id'), user=self.request.user)
         serializer.save(project=project)
 
+
+# API view for exporting summary of a project as a gist
 class ExportSummaryView(generics.GenericAPIView):
     permission_classes = [IsAuthenticated]
 

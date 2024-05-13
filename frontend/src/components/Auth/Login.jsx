@@ -15,7 +15,7 @@ const Login = () => {
       const { access, refresh } = response.data;
       localStorage.setItem('accessToken', access);
       localStorage.setItem('refreshToken', refresh);
-      navigate('/');
+      navigate('/home');
     } catch (error) {
       setError('Invalid credentials. Please try again.');
     }

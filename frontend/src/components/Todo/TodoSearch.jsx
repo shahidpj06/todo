@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
-const TodoSearch = ({ add_todo, projectTitle }) => {
+const TodoSearch = ({ add_todo }) => {
   const { register, handleSubmit, reset, formState:{ errors } } = useForm()
   
   return (
     <div className="todo-search">
-      <div className='project-title'>
-        <h1>{projectTitle}</h1>
-      </div>
         <form action="" onSubmit={handleSubmit((data) => {
           add_todo(data);
           reset()

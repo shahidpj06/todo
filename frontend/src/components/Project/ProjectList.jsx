@@ -9,7 +9,7 @@ const ProjectList = ({ projects }) => {
         <ul>
           {projects.map((project) => (
             <li key={project.id}>
-              <Link to={`${project.id}`} className="project-box-link">
+              <Link to={`/home/${project.id}`} className="project-box-link">
                 <div className="project-box">
                   {project.title}
                 </div>

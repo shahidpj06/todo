@@ -8,7 +8,6 @@ const TodoFilter = ({todos}) => {
     <div>
       <br />
       <p style={{ color: 'white', textAlign: 'center' }}>Summary: {completedTodos}/{completedTodos + pendingTodos} tasks completed</p>
-      <br />
     </div>
   );
 };
