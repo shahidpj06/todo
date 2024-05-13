@@ -45,7 +45,7 @@
 
   <h1>Screenshots</h1>
     <p>Login</p>
-    ![Screenshot (116)](https://github.com/shahidpj06/todo/assets/127497564/253f6acc-ca18-4931-b18e-669421eef303)
+    https://github.com/shahidpj06/todo/assets/127497564/253f6acc-ca18-4931-b18e-669421eef303
   
   
   
